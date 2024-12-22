@@ -1,0 +1,43 @@
+// Menu Driven Functions
+// where,
+// 		1. Area of Circle
+// 		2. Checking Odd or Even
+// 		3. Converting Fareheit to Celsius
+
+
+#include<stdio.h>
+int main(){
+	int choice,n;
+	float r,area,c,f;
+	
+	printf("_____________________Menu Driven Program_____________________ \n\n\n ");
+	printf("1. Area of Circle \n 2. Checking Odd or Even \n 3.Converting Fareheit to Celsius ");
+	
+	printf("\n Enter your choice (1-3) : ");
+	scanf("%d",&choice);
+	
+	switch(choice){
+		case 1 : printf("Enter the radius : ");
+			   	scanf("%f",&r);
+			   	area = 3.14*r*r;
+			   	printf("Area of rectangle = %f",area);
+		break;
+		
+		case 2 : printf("Enter the number : ");
+			   	scanf("%d",&n);
+			if(n%2==0){
+				printf("%d is even number",n);
+			}else{
+				printf("%d is odd number",n);
+			}
+		break;
+		
+				case 3 : printf("Enter the farenheit : ");
+			   	scanf("%f",&f);
+			   	c = (f-32)*5/9;
+			   	printf("%f celsius",c);
+		break;
+		
+		default : printf("Enter the num from 1-3 only!!!");
+	}
+}
